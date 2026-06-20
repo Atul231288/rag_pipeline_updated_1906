@@ -2,7 +2,7 @@
 # from retrieval.chroma_dense_retrieval import chroma_dense_retriever
 from reranking.reranker import rerank
 from config.settings import CHROMA_PATH, EMBED_MODEL, RERANK_MODEL, TOP_K_DENSE, TOP_K_RERANK
-from chromadb.utils import embedding_functions
+from embeddings.embedder import get_embedding_function
 from llm.answer_generation import generate_answer
 from llm.model import llm
 from utils.logger import get_logger
@@ -15,7 +15,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 logger = get_logger(__name__)
-embedding_function = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL)
+embedding_function = get_embedding_function()
 
 
 
