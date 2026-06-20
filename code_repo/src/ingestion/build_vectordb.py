@@ -76,6 +76,9 @@ class VectorDBBuilder_RAGbench:
             for idx, doc in enumerate(dataset):
                 text = preprocess_documents(doc)
                 chunks = create_chunks(text)
+                if not chunks:
+                    logger.warning(f"Document {idx+1} produced no chunks, skipping.")
+                    continue
                 print(f"Document {idx+1} split into {len(chunks)} chunks.")
                 self.build_vector_db(
                     chunks=chunks,

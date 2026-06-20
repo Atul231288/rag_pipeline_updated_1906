@@ -142,3 +142,16 @@ runs/
 models/
 checkpoints/
 .chroma/
+
+# ChromaDB
+vectordb/
+chroma_db/
+
+# Chroma database files
+*.sqlite3
+*.bin
+
+vectordb/
+chroma_db/
+*.sqlite3
+*.bin
