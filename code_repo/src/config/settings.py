@@ -1,0 +1,9 @@
+CHROMA_PATH = "./vectordb/chroma_db"
+EMBED_MODEL = "BAAI/bge-small-en-v1.5"
+RERANK_MODEL = "BAAI/bge-reranker-base"
+RAG_MODEL = "llama3.1:8b"
+TOP_K_DENSE = 10
+TOP_K_RERANK = 5
+LOG_FILE = "rag_pipeline.log"
+LOG_LEVEL = "INFO"
+LOG_DIR = "./logs"
